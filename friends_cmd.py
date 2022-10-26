@@ -5,7 +5,7 @@ app = typer.Typer()
 
 
 @app.command()
-def show():
+def list():
     friend_list = Friends().getAll()
     for username, PUK in friend_list.items():
         print(username)
