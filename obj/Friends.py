@@ -17,8 +17,11 @@ class Friends(metaclass=SingletonMeta):
         self.list = []
         self.file_address = file_address
 
-    def show(self):
-        print(self.list)
+    def getAll(self):
+        return self.list
+    
+    def get(self, username):
+        return self.list[username]
         
     def load(self):
         with open(self.file_address, "r") as f:
@@ -28,8 +31,8 @@ class Friends(metaclass=SingletonMeta):
     def add(self, username, PUK):
         self.list[username] = PUK
 
-    def delete(self):
-        pass
+    def delete(self, username):
+        del self.list[username]
 
     def save(self):
         with open(self.file_address, "w") as f:

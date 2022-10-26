@@ -25,5 +25,5 @@ class Profile(metaclass=SingletonMeta):
         print(self.PUK_srting)
     
     def generate_key():
-        
+        pass
 
