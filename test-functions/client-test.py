@@ -2,7 +2,7 @@ import paho.mqtt.client as mqtt
 import sys
 
 
-host = 'localcost'
+host = 'broker.hivemq.com'
 port = 1883
 
 sender = sys.argv[1]
